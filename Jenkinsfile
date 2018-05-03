@@ -1,3 +1,4 @@
+node('xcode9') {
     stage('Checkout/Build/Test') {
     
         // Build and Test
@@ -7,3 +8,4 @@
         step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: 'build/reports/junit.xml'])
     }
 
+}
