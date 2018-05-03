@@ -1,5 +1,3 @@
-node('iOS Node') {
-
     stage('Checkout/Build/Test') {
     
         // Build and Test
@@ -9,4 +7,3 @@ node('iOS Node') {
         step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: 'build/reports/junit.xml'])
     }
 
-}
