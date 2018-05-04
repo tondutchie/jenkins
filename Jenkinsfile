@@ -8,11 +8,5 @@ pipeline {
       }
      }
 
-     stage('BuildIpa') {
-     steps {
-        sh 'fastlane make_ipa'
-      }
-     }
-
     }
    }
