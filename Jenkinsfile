@@ -2,14 +2,14 @@ pipeline {
   agent any
 
   stages {
-    stage('Build ipa') {
+    stage('Test') {
       when {
         expression {
           return params.type == "test"
         }
       }
       steps {
-        sh 'fastlane make_ipa'
+        sh 'fastlane tests'
       }
      }
     }
