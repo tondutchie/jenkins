@@ -3,20 +3,16 @@ pipeline {
 
   stages {
     stage('Test') {
-      when {
-        expression {
-          return params.type == "test"
-        }
-      }
       steps {
         sh 'fastlane tests'
       }
      }
 
-     stage('Build Ipa') {
+     stage('BuildIpa') {
      steps {
-     sh 'fastlane make_ipa'
+        sh 'fastlane make_ipa'
       }
      }
+
     }
    }
