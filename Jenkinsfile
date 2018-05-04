@@ -1,9 +1,11 @@
 pipeline {
-    agent any
-    
-    environment {
-        LANG = 'en_US.UTF-8'
-        LANGUAGE = 'en_US.UTF-8'
-        LC_ALL = 'en_US.UTF-8'
+  agent any
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
     }
-}
+   }
+ }
